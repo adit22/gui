@@ -1,0 +1,32 @@
+from tkinter import *
+wind=Tk()
+wind.geometry("400x600")
+wind.title("rectangle")
+def draw():
+    x=400
+    y=400
+    var2=Canvas(wind,width=x,height=y)
+    var2.pack()
+    var2.create_rectangle(var3.get(),var5.get(),var4.get(),var6.get(),fill="#476042")
+var1=Label(wind,text="rectangle",font="ariel 10 bold")
+var1.pack()
+vr1=Label(wind,text="x1",font="ariel 10 bold")
+vr1.pack()
+var3=Entry(wind)
+var3.pack()
+vr2=Label(wind,text="x2",font="ariel 10 bold")
+vr2.pack()
+var4=Entry(wind)
+var4.pack()
+vr3=Label(wind,text="y1",font="ariel 10 bold")
+vr3.pack()
+var5=Entry(wind)
+var5.pack()
+vr4=Label(wind,text="y2",font="ariel 10 bold")
+vr4.pack()
+var6=Entry(wind)
+var6.pack()
+var7=Button(wind,text="draw",command=draw)
+var7.pack()
+
+wind.mainloop()
